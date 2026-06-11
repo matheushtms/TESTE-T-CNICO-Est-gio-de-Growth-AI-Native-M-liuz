@@ -14,9 +14,36 @@ A solução também acompanha um **Dashboard visual em Streamlit** e um **guia p
 ## 🔗 Recursos Principais e Planilhas
 
 > [!TIP]
-> * **Planilha Oficial de Histórico (Google Sheets):** [Acesse os resultados e histórico dos experimentos](https://docs.google.com/spreadsheets/d/1QznZnlbodHLE-JAENu0m6w9VgoFHZloDghs2gGNX3YI/edit?usp=sharing)
-> * **Pasta de Relatórios Gerados:** [reports/](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports)
+> * **Planilha Oficial de Acompanhamento (Google Sheets - Leitura):** [Acesse os resultados e histórico dos experimentos](https://docs.google.com/spreadsheets/d/1QznZnlbodHLE-JAENu0m6w9VgoFHZloDghs2gGNX3YI/edit?usp=sharing)
+> * **Histórico CSV Local (Preenchido):** [historico_testes.csv](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/output/historico_testes.csv)
 > * **Instruções para Agentes de IA:** [instructions_for_ai.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/prompts/instructions_for_ai.md)
+
+---
+
+## 📄 Relatórios de Testes A/B Gerados
+
+Os relatórios executivos gerados a partir da análise dos dados reais dos experimentos de cada parceiro estão disponíveis para visualização:
+* 📄 **Relatório Parceiro A:** [relatorio_parceiro_a.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_a.md)
+* 📄 **Relatório Parceiro B:** [relatorio_parceiro_b.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_b.md)
+* 📄 **Relatório Parceiro C:** [relatorio_parceiro_c.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_c.md)
+
+---
+
+## ⚙️ A Solução (Arquitetura e Scripts)
+
+A solução está estruturada de forma modular para fácil manutenção e reuso. Os principais arquivos e suas respectivas responsabilidades são:
+
+* **Entrypoint do Sistema:**
+  * 🖥️ [main.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/main.py): CLI principal que orquestra todo o fluxo, desde o carregamento dos dados até a gravação na planilha.
+* **Componentes de Código (em [src/](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src)):**
+  * 📥 [loader.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/loader.py): Limpeza de moedas (R$ -> float) e carregamento inicial dos datasets CSV.
+  * 🛡️ [validator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/validator.py): Validador de consistência (valida colunas obrigatórias, formatos e integridade dos dados).
+  * 📈 [metrics.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/metrics.py): Módulo para cálculo de Lucro Líquido, ROI e métricas de Unit Economics agregadas ou diárias.
+  * 🔬 [analyzer.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/analyzer.py): Motor estatístico que executa os testes de significância (Welch's T-Test e Mann-Whitney U-Test) e aplica a árvore heurística de decisão de Growth.
+  * ✍️ [report_generator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/report_generator.py): Exportador de relatórios executivos estruturados em Markdown.
+  * 🔌 [sheets.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/sheets.py): Integração para gravação dos resultados localmente (CSV) e no Google Sheets (via Apps Script Web App ou Conta de Serviço).
+  * 📊 [dashboard.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/dashboard.py): Dashboard interativo em Streamlit para exploração visual das métricas e distribuições.
+  * 🎲 [mock_generator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/mock_generator.py): Gerador opcional de datasets de teste sintéticos.
 
 ---
 
