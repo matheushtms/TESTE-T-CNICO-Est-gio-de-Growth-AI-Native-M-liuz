@@ -1,7 +1,7 @@
 # Relatório de Teste A/B de Cashback – Méliuz
 **Parceiro Analisado:** Parceiro A  
 **Período do Experimento:** 2011-01-01 a 2011-04-02 (92 dias)  
-**Data da Análise:** 2026-06-11 15:14:53  
+**Data da Análise:** 2026-06-11 19:35:46  
 
 ---
 
