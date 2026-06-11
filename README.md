@@ -14,18 +14,57 @@ A solução também acompanha um **Dashboard visual em Streamlit** e um **guia p
 ## 🔗 Recursos Principais e Planilhas
 
 > [!TIP]
-> * **Planilha Oficial de Acompanhamento (Google Sheets - Leitura):** [Acesse os resultados e histórico dos experimentos](https://docs.google.com/spreadsheets/d/1QznZnlbodHLE-JAENu0m6w9VgoFHZloDghs2gGNX3YI/edit?usp=sharing)
-> * **Histórico CSV Local (Preenchido):** [historico_testes.csv](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/output/historico_testes.csv)
-> * **Instruções para Agentes de IA:** [instructions_for_ai.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/prompts/instructions_for_ai.md)
+> * **Planilha Oficial de Acompanhamento (Google Sheets - Acesso de Leitura):** [Acesse os resultados e histórico dos experimentos](https://docs.google.com/spreadsheets/d/1QznZnlbodHLE-JAENu0m6w9VgoFHZloDghs2gGNX3YI/edit?usp=sharing)
+> * **Histórico CSV Local (Preenchido):** [historico_testes.csv](./output/historico_testes.csv)
+> * **Instruções para Agentes de IA:** [instructions_for_ai.md](./prompts/instructions_for_ai.md)
 
 ---
 
-## 📄 Relatórios de Testes A/B Gerados
+## 📄 Relatórios dos Testes A/B Gerados (Resultados Reais)
 
-Os relatórios executivos gerados a partir da análise dos dados reais dos experimentos de cada parceiro estão disponíveis para visualização:
-* 📄 **Relatório Parceiro A:** [relatorio_parceiro_a.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_a.md)
-* 📄 **Relatório Parceiro B:** [relatorio_parceiro_b.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_b.md)
-* 📄 **Relatório Parceiro C:** [relatorio_parceiro_c.md](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/reports/relatorio_parceiro_c.md)
+Abaixo estão os resumos executivos e tabelas de resultados reais consolidados dos testes A/B gerados pelo pipeline para os três parceiros:
+
+### 🤝 Parceiro A
+* **Período do Experimento:** 01/01/2011 a 02/04/2011 (92 dias)
+* **Relatório Completo:** [relatorio_parceiro_a.md](./reports/relatorio_parceiro_a.md)
+* **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
+* **Justificativa Estatística:** Nenhuma das variantes superou o controle em lucro líquido total ou apresentou ROI sustentável. O Grupo 3 causou redução de lucro estatisticamente significativa ($p < 0.05$).
+
+#### Tabela de Resultados Consolidados (Parceiro A)
+| Variante | Compradores | GMV Total | Comissão | Cashback | Lucro Líquido | ROI |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Grupo 1 (Controle)** | 9.633 | R$ 5.605.173,00 | R$ 638.135,00 | R$ 233.424,00 | **R$ 404.711,00** | **173.4%** |
+| **Grupo 2** | 10.814 | R$ 6.423.096,00 | R$ 728.178,00 | R$ 370.659,00 | **R$ 357.519,00** | **96.5%** |
+| **Grupo 3** | 11.410 | R$ 6.785.856,00 | R$ 767.887,00 | R$ 503.600,00 | **R$ 264.287,00** | **52.5%** |
+
+---
+
+### 🤝 Parceiro B
+* **Período do Experimento:** 01/05/2011 a 30/06/2011 (61 dias)
+* **Relatório Completo:** [relatorio_parceiro_b.md](./reports/relatorio_parceiro_b.md)
+* **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
+* **Justificativa Estatística:** Ambas as variantes de tratamento causaram queda acentuada e estatisticamente significativa no lucro diário ($p < 0.05$).
+
+#### Tabela de Resultados Consolidados (Parceiro B)
+| Variante | Compradores | GMV Total | Comissão | Cashback | Lucro Líquido | ROI |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Grupo 1 (Controle)** | 7.990 | R$ 4.093.818,00 | R$ 450.321,00 | R$ 163.751,00 | **R$ 286.570,00** | **175.0%** |
+| **Grupo 2** | 5.452 | R$ 2.863.019,00 | R$ 314.935,00 | R$ 171.778,00 | **R$ 143.157,00** | **83.3%** |
+| **Grupo 3** | 5.029 | R$ 2.629.963,00 | R$ 289.290,00 | R$ 236.697,00 | **R$ 52.593,00** | **22.2%** |
+
+---
+
+### 🤝 Parceiro C
+* **Período do Experimento:** 01/07/2011 a 14/08/2011 (45 dias)
+* **Relatório Completo:** [relatorio_parceiro_c.md](./reports/relatorio_parceiro_c.md)
+* **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
+* **Justificativa Estatística:** O Grupo 2 reduziu o lucro líquido a zero (ROI de 0.0%), com uma queda diária de lucro estatisticamente significativa ($p < 0.05$).
+
+#### Tabela de Resultados Consolidados (Parceiro C)
+| Variante | Compradores | GMV Total | Comissão | Cashback | Lucro Líquido | ROI |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Grupo 1 (Controle)** | 4.549 | R$ 1.738.460,00 | R$ 121.693,00 | R$ 86.924,00 | **R$ 34.769,00** | **40.0%** |
+| **Grupo 2** | 4.522 | R$ 1.685.235,00 | R$ 117.967,00 | R$ 117.967,00 | **R$ 0,00** | **0.0%** |
 
 ---
 
@@ -34,27 +73,16 @@ Os relatórios executivos gerados a partir da análise dos dados reais dos exper
 A solução está estruturada de forma modular para fácil manutenção e reuso. Os principais arquivos e suas respectivas responsabilidades são:
 
 * **Entrypoint do Sistema:**
-  * 🖥️ [main.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/main.py): CLI principal que orquestra todo o fluxo, desde o carregamento dos dados até a gravação na planilha.
-* **Componentes de Código (em [src/](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src)):**
-  * 📥 [loader.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/loader.py): Limpeza de moedas (R$ -> float) e carregamento inicial dos datasets CSV.
-  * 🛡️ [validator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/validator.py): Validador de consistência (valida colunas obrigatórias, formatos e integridade dos dados).
-  * 📈 [metrics.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/metrics.py): Módulo para cálculo de Lucro Líquido, ROI e métricas de Unit Economics agregadas ou diárias.
-  * 🔬 [analyzer.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/analyzer.py): Motor estatístico que executa os testes de significância (Welch's T-Test e Mann-Whitney U-Test) e aplica a árvore heurística de decisão de Growth.
-  * ✍️ [report_generator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/report_generator.py): Exportador de relatórios executivos estruturados em Markdown.
-  * 🔌 [sheets.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/sheets.py): Integração para gravação dos resultados localmente (CSV) e no Google Sheets (via Apps Script Web App ou Conta de Serviço).
-  * 📊 [dashboard.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/dashboard.py): Dashboard interativo em Streamlit para exploração visual das métricas e distribuições.
-  * 🎲 [mock_generator.py](file:///c:/Users/matheus.soares/Desktop/TESTE-T-CNICO-Est-gio-de-Growth-AI-Native-M-liuz/src/mock_generator.py): Gerador opcional de datasets de teste sintéticos.
-
----
-
-## ⚡ Funcionalidades do Sistema
-
-* **Cálculo de Métricas de Negócio:** Lucro Líquido (Receita - Custo), ROI, comissão e cashback.
-* **Unit Economics de Growth:** Mapeamento de GMV, comissão, cashback e lucro médio por comprador único.
-* **Motores Estatísticos:** Teste T de Welch (compara médias com variâncias desiguais) e Mann-Whitney U-Test (teste não-paramétrico para flutuações e sazonalidades).
-* **Heurística de Decisão de Growth:** Algoritmo de decisão automatizado para recomendação de manter o controle, escalar variantes qualificadas ou descartar variantes ineficientes.
-* **Geração de Relatórios:** Relatórios executivos prontos para apresentação comercial em formato Markdown.
-* **Sincronização Automática:** Gravação local em CSV e envio em tempo real para a Planilha do Google Sheets.
+  * 🖥️ [main.py](./main.py): CLI principal que orquestra todo o fluxo, desde o carregamento dos dados até a gravação na planilha.
+* **Componentes de Código (em [src/](./src)):**
+  * 📥 [loader.py](./src/loader.py): Limpeza de moedas (R$ -> float) e carregamento inicial dos datasets CSV.
+  * 🛡️ [validator.py](./src/validator.py): Validador de consistência (valida colunas obrigatórias, formatos e integridade dos dados).
+  * 📈 [metrics.py](./src/metrics.py): Módulo para cálculo de Lucro Líquido, ROI e métricas de Unit Economics agregadas ou diárias.
+  * 🔬 [analyzer.py](./src/analyzer.py): Motor estatístico que executa os testes de significância (Welch's T-Test e Mann-Whitney U-Test) e aplica a árvore heurística de decisão de Growth.
+  * ✍️ [report_generator.py](./src/report_generator.py): Exportador de relatórios executivos estruturados em Markdown.
+  * 🔌 [sheets.py](./src/sheets.py): Integração para gravação dos resultados localmente (CSV) e no Google Sheets (via Apps Script Web App ou Conta de Serviço).
+  * 📊 [dashboard.py](./src/dashboard.py): Dashboard interativo em Streamlit para exploração visual das métricas e distribuições.
+  * 🎲 [mock_generator.py](./src/mock_generator.py): Gerador opcional de datasets de teste sintéticos.
 
 ---
 
@@ -212,7 +240,7 @@ Ideal por ser extremamente simples e não exigir nenhuma configuração no Googl
 4. Clique em **Implantar** > **Nova implantação** no canto superior direito.
 5. Selecione o tipo de implantação como **App da Web** (Web App). Configure:
    * **Executar como:** `Eu` (sua conta Google)
-   * **Quem tem acesso:** `Qualquer pessoa` (permite que o script envie os dados via requisição HTTP)
+   * **Who has access:** `Qualquer pessoa` (permite que o script envie os dados via requisição HTTP)
 6. Clique em **Implantar**, conceda as autorizações necessárias e copie a **URL do App da Web** gerada.
 7. Cole a URL no arquivo `.env` na raiz do projeto:
    ```env
