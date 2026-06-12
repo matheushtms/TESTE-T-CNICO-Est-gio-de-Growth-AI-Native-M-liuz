@@ -1,4 +1,4 @@
-# Méliuz Cashback A/B Test Analyzer 💰
+# Méliuz Cashback A/B Test Analyzer 
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -11,7 +11,7 @@ A solução também acompanha um **Dashboard visual em Streamlit** e um **guia p
 
 ---
 
-## 🔗 Recursos Principais e Planilhas
+##  Recursos Principais e Planilhas
 
 > [!TIP]
 > * **Planilha Oficial de Acompanhamento (Google Sheets - Acesso de Leitura):** [Acesse os resultados e histórico dos experimentos](https://docs.google.com/spreadsheets/d/1QznZnlbodHLE-JAENu0m6w9VgoFHZloDghs2gGNX3YI/edit?usp=sharing)
@@ -20,11 +20,11 @@ A solução também acompanha um **Dashboard visual em Streamlit** e um **guia p
 
 ---
 
-## 📄 Relatórios dos Testes A/B Gerados (Resultados Reais)
+##  Relatórios dos Testes A/B Gerados (Resultados Reais)
 
 Abaixo estão os resumos executivos e tabelas de resultados reais consolidados dos testes A/B gerados pelo pipeline para os três parceiros:
 
-### 🤝 Parceiro A
+###  Parceiro A
 * **Período do Experimento:** 01/01/2011 a 02/04/2011 (92 dias)
 * **Relatório Completo:** [relatorio_parceiro_a.md](./reports/relatorio_parceiro_a.md)
 * **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
@@ -39,7 +39,7 @@ Abaixo estão os resumos executivos e tabelas de resultados reais consolidados d
 
 ---
 
-### 🤝 Parceiro B
+###  Parceiro B
 * **Período do Experimento:** 01/05/2011 a 30/06/2011 (61 dias)
 * **Relatório Completo:** [relatorio_parceiro_b.md](./reports/relatorio_parceiro_b.md)
 * **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
@@ -54,7 +54,7 @@ Abaixo estão os resumos executivos e tabelas de resultados reais consolidados d
 
 ---
 
-### 🤝 Parceiro C
+###  Parceiro C
 * **Período do Experimento:** 01/07/2011 a 14/08/2011 (45 dias)
 * **Relatório Completo:** [relatorio_parceiro_c.md](./reports/relatorio_parceiro_c.md)
 * **Recomendação Final:** **Manter o Controle (Grupo 1) em 100%**
@@ -68,25 +68,25 @@ Abaixo estão os resumos executivos e tabelas de resultados reais consolidados d
 
 ---
 
-## ⚙️ A Solução (Arquitetura e Scripts)
+##  A Solução (Arquitetura e Scripts)
 
 A solução está estruturada de forma modular para fácil manutenção e reuso. Os principais arquivos e suas respectivas responsabilidades são:
 
 * **Entrypoint do Sistema:**
-  * 🖥️ [main.py](./main.py): CLI principal que orquestra todo o fluxo, desde o carregamento dos dados até a gravação na planilha.
+  *  [main.py](./main.py): CLI principal que orquestra todo o fluxo, desde o carregamento dos dados até a gravação na planilha.
 * **Componentes de Código (em [src/](./src)):**
-  * 📥 [loader.py](./src/loader.py): Limpeza de moedas (R$ -> float) e carregamento inicial dos datasets CSV.
-  * 🛡️ [validator.py](./src/validator.py): Validador de consistência (valida colunas obrigatórias, formatos e integridade dos dados).
-  * 📈 [metrics.py](./src/metrics.py): Módulo para cálculo de Lucro Líquido, ROI e métricas de Unit Economics agregadas ou diárias.
-  * 🔬 [analyzer.py](./src/analyzer.py): Motor estatístico que executa os testes de significância (Welch's T-Test e Mann-Whitney U-Test) e aplica a árvore heurística de decisão de Growth.
-  * ✍️ [report_generator.py](./src/report_generator.py): Exportador de relatórios executivos estruturados em Markdown.
-  * 🔌 [sheets.py](./src/sheets.py): Integração para gravação dos resultados localmente (CSV) e no Google Sheets (via Apps Script Web App ou Conta de Serviço).
-  * 📊 [dashboard.py](./src/dashboard.py): Dashboard interativo em Streamlit para exploração visual das métricas e distribuições.
-  * 🎲 [mock_generator.py](./src/mock_generator.py): Gerador opcional de datasets de teste sintéticos.
+  *  [loader.py](./src/loader.py): Limpeza de moedas (R$ -> float) e carregamento inicial dos datasets CSV.
+  *  [validator.py](./src/validator.py): Validador de consistência (valida colunas obrigatórias, formatos e integridade dos dados).
+  *  [metrics.py](./src/metrics.py): Módulo para cálculo de Lucro Líquido, ROI e métricas de Unit Economics agregadas ou diárias.
+  *  [analyzer.py](./src/analyzer.py): Motor estatístico que executa os testes de significância (Welch's T-Test e Mann-Whitney U-Test) e aplica a árvore heurística de decisão de Growth.
+  *  [report_generator.py](./src/report_generator.py): Exportador de relatórios executivos estruturados em Markdown.
+  *  [sheets.py](./src/sheets.py): Integração para gravação dos resultados localmente (CSV) e no Google Sheets (via Apps Script Web App ou Conta de Serviço).
+  *  [dashboard.py](./src/dashboard.py): Dashboard interativo em Streamlit para exploração visual das métricas e distribuições.
+  *  [mock_generator.py](./src/mock_generator.py): Gerador opcional de datasets de teste sintéticos.
 
 ---
 
-## 🚀 Como Executar o Projeto
+##  Como Executar o Projeto
 
 ### 1. Pré-requisitos
 Certifique-se de ter o **Python 3.10 ou superior** instalado na sua máquina.
@@ -128,7 +128,7 @@ O dashboard será aberto no seu navegador padrão (geralmente em `http://localho
 
 ---
 
-## 📊 Estrutura de Arquivos e Pastas
+##  Estrutura de Arquivos e Pastas
 
 ```text
 growth-ab-test/
@@ -156,7 +156,7 @@ growth-ab-test/
 
 ---
 
-## 🛠️ Reuso para Qualquer Novo Dataset (Sem alterar o código)
+##  Reuso para Qualquer Novo Dataset (Sem alterar o código)
 
 A pipeline foi projetada de forma genérica. Para analisar um novo teste A/B:
 1. Garanta que o novo arquivo CSV siga o mesmo schema exigido:
@@ -175,7 +175,7 @@ A pipeline foi projetada de forma genérica. Para analisar um novo teste A/B:
 
 ---
 
-## 🔬 Metodologia de Análise de Growth
+##  Metodologia de Análise de Growth
 
 Muitos testes A/B limitam-se a comparar o somatório do GMV ou volume de compradores, ignorando os custos envolvidos. A nossa solução aplica uma tomada de decisão focada em **lucro líquido sustentável** e **estatística rigorosa**:
 
@@ -199,7 +199,7 @@ A decisão de recomendar a variante vencedora é orientada por uma árvore de de
 
 ---
 
-## 📝 Integração com o Google Sheets
+##  Integração com o Google Sheets
 
 A aplicação grava cada novo teste analisado no histórico de experimentos. Por padrão, ela grava em um arquivo CSV local em `output/historico_testes.csv`. Caso queira salvar diretamente na planilha do Google Sheets, a solução oferece suporte à gravação em tempo real na planilha oficial do projeto:
 
